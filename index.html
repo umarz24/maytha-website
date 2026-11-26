@@ -3,122 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#f5f0e8">
-  <meta name="description" content="MAYTHA — considered details for everyday adornment.">
-  <title>MAYTHA — The Art of the Detail</title>
+  <meta name="theme-color" content="#f6f1e9">
+  <meta name="description" content="MAYTHA — thoughtful details, timeless hair accessories.">
+  <title>MAYTHA — Hair Accessories</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=DM+Sans:wght@400;500;600;700&family=Italiana&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="announcement">A LITTLE SOMETHING BEAUTIFUL IS ON ITS WAY <span>✳</span></div>
+  <div class="announcement">A little detail makes all the difference</div>
   <header class="site-header">
-    <a class="wordmark" href="#home" aria-label="Maytha home"><span class="arabic-mark" lang="ar" dir="rtl">ميثا</span><span class="english-mark">MAYTHA</span></a>
-    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
-    <nav class="main-nav" aria-label="Main navigation">
-      <a href="#shop">SHOP</a><a href="#story">OUR STORY</a><a href="#details">THE DETAILS</a>
+    <a class="brand" href="#home" aria-label="MAYTHA home">
+      <span class="arabic-mark" lang="ar">ميثا</span>
+      <span class="english-mark">MAYTHA</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#home">Home</a>
+      <a href="#collections">Collections</a>
+      <a href="#story">Our story</a>
     </nav>
-    <button class="bag-button" id="openBag">BAG <span id="bagCount">0</span></button>
+    <button class="cart-trigger" id="cartTrigger" aria-label="Open shopping bag">
+      Bag <span class="cart-count" id="cartCount">0</span>
+    </button>
   </header>
 
   <main>
     <section class="hero" id="home">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="eyebrow-line"></span> THE ART OF THE DETAIL</p>
-        <h1>Little things.<br><em>Lasting</em> impressions.</h1>
-        <p class="hero-description">Thoughtful accessories, made to make the everyday feel a little more special.</p>
-        <a class="round-link" href="#shop">DISCOVER THE EDIT <span>↗</span></a>
+        <p class="eyebrow">THE LITTLE THINGS, BEAUTIFULLY DONE</p>
+        <h1>Everyday pieces.<br><em>Considered details.</em></h1>
+        <p class="hero-text">A thoughtful edit of hair accessories made to bring a softer finish to your everyday look.</p>
+        <a class="primary-link" href="#collections">Explore the collection <span>↗</span></a>
       </div>
-      <div class="hero-art" aria-label="Abstract editorial still life">
-        <div class="sun-disc"></div>
-        <div class="ribbon ribbon-one"></div>
-        <div class="ribbon ribbon-two"></div>
+      <div class="hero-art">
         <div class="hero-orbit"></div>
-        <div class="hero-stamp">M<br><small>01</small></div>
-        <p class="art-caption">FORM / FUNCTION / FEELING</p>
+        <img src="assets/maytha-accessories.png" alt="A curated selection of claw clips, satin scrunchies, pearl hair clips and headbands">
+        <span class="art-note">THE ACCESSORY EDIT · 01</span>
       </div>
-      <div class="hero-side-note">RIYADH · EST. 2026</div>
     </section>
 
-    <section class="ticker" aria-label="Brand message">
-      <div class="ticker-track"><span>MADE FOR THE MOMENTS IN BETWEEN</span><b>✳</b><span>MADE FOR THE MOMENTS IN BETWEEN</span><b>✳</b><span>MADE FOR THE MOMENTS IN BETWEEN</span><b>✳</b></div>
+    <section class="intro-strip">
+      <span>SOFT NEUTRALS</span><i></i><span>TIMELESS SHAPES</span><i></i><span>SUBTLE STATEMENT</span>
     </section>
 
-    <section class="shop-section section-pad" id="shop">
+    <section class="collection section-wrap" id="collections">
       <div class="section-heading">
-        <div><p class="eyebrow">THE FIRST EDIT / 001</p><h2>Find your <em>favourite</em>.</h2></div>
-        <p class="section-note">A considered collection of little finishing touches.<br>Choose a piece that feels like you.</p>
+        <div><p class="eyebrow">THE MAYTHA EDIT</p><h2>Find your finishing touch.</h2></div>
+        <p>Pieces to keep close, wear often, and come back to.</p>
       </div>
-      <div class="filter-row" role="group" aria-label="Filter products">
-        <button class="filter active" data-filter="all">ALL PIECES</button>
-        <button class="filter" data-filter="clips">CLAW CLIPS</button>
-        <button class="filter" data-filter="scrunchies">SCRUNCHIES</button>
-        <button class="filter" data-filter="details">FINISHING TOUCHES</button>
-      </div>
-      <div class="product-grid" id="productGrid">
-        <article class="product-card" data-category="clips">
-          <div class="product-image product-image-1"><span class="product-number">01 / 04</span><span class="shape shape-clip"></span><span class="image-label">THE EVERYDAY</span></div>
-          <div class="product-meta"><div><h3>The Form Clip</h3><p>Warm tortoise · Hair clip</p></div><strong>SAR 12</strong></div>
-          <button class="add-button" data-product="The Form Clip" data-price="12">ADD TO BAG <span>＋</span></button>
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-image crop-claw"><img src="assets/maytha-accessories.png" alt="Assorted elegant claw clips"></div>
+          <div class="product-info"><div><h3>The Claw Edit</h3><p>Everyday statement clips</p></div><span>01</span></div>
+          <button class="add-button" data-product="claw">Add to bag <span>+</span></button>
         </article>
-        <article class="product-card" data-category="scrunchies">
-          <div class="product-image product-image-2"><span class="product-number">02 / 04</span><span class="shape shape-scrunchie"></span><span class="image-label">SOFT STRUCTURE</span></div>
-          <div class="product-meta"><div><h3>The Cloud Scrunchie</h3><p>Soft champagne · Scrunchie</p></div><strong>SAR 7</strong></div>
-          <button class="add-button" data-product="The Cloud Scrunchie" data-price="7">ADD TO BAG <span>＋</span></button>
+        <article class="product-card">
+          <div class="product-image crop-scrunchie"><img src="assets/maytha-accessories.png" alt="Soft satin scrunchies"></div>
+          <div class="product-info"><div><h3>Soft Satin</h3><p>Scrunchies for every day</p></div><span>02</span></div>
+          <button class="add-button" data-product="scrunchie">Add to bag <span>+</span></button>
         </article>
-        <article class="product-card" data-category="details">
-          <div class="product-image product-image-3"><span class="product-number">03 / 04</span><span class="shape shape-bow"></span><span class="image-label">A QUIET STATEMENT</span></div>
-          <div class="product-meta"><div><h3>The Muse Bow</h3><p>Espresso · Hair bow</p></div><strong>SAR 10</strong></div>
-          <button class="add-button" data-product="The Muse Bow" data-price="10">ADD TO BAG <span>＋</span></button>
+        <article class="product-card">
+          <div class="product-image crop-pearl"><img src="assets/maytha-accessories.png" alt="Pearl and gold hair accessories"></div>
+          <div class="product-info"><div><h3>Pearl Details</h3><p>A little extra shine</p></div><span>03</span></div>
+          <button class="add-button" data-product="pearl">Add to bag <span>+</span></button>
         </article>
-        <article class="product-card" data-category="clips">
-          <div class="product-image product-image-4"><span class="product-number">04 / 04</span><span class="shape shape-clip shape-clip-light"></span><span class="image-label">THE LITTLE LUXE</span></div>
-          <div class="product-meta"><div><h3>The Arc Clip</h3><p>Ivory · Hair clip</p></div><strong>SAR 14</strong></div>
-          <button class="add-button" data-product="The Arc Clip" data-price="14">ADD TO BAG <span>＋</span></button>
+        <article class="product-card">
+          <div class="product-image crop-headband"><img src="assets/maytha-accessories.png" alt="Neutral and pearl headbands"></div>
+          <div class="product-info"><div><h3>The Headband Edit</h3><p>Simple, polished finishing touches</p></div><span>04</span></div>
+          <button class="add-button" data-product="headband">Add to bag <span>+</span></button>
         </article>
       </div>
-      <p class="demo-note">CONCEPT PREVIEW · Product names, prices and availability are placeholders.</p>
+      <p class="price-note">Preview catalogue — product prices and availability will be updated before launch.</p>
     </section>
 
-    <section class="story-section" id="story">
-      <div class="story-art"><div class="story-circle"></div><span class="story-side">A STUDY IN SIMPLICITY</span><span class="story-monogram">M.</span></div>
-      <div class="story-copy"><p class="eyebrow">A NOTE FROM MAYTHA</p><h2>Beauty lives<br>in the <em>details.</em></h2><p>We believe the smallest details can change how a moment feels. MAYTHA is a celebration of considered pieces, soft textures and everyday rituals.</p><a href="#details" class="text-link">A CLOSER LOOK <span>↗</span></a></div>
-    </section>
-
-    <section class="details-section section-pad" id="details">
-      <p class="eyebrow">THE MAYTHA POINT OF VIEW</p>
-      <div class="details-grid">
-        <div><span>01</span><h3>Considered<br><em>simplicity.</em></h3><p>Pieces that feel effortless, never ordinary.</p></div>
-        <div><span>02</span><h3>Everyday<br><em>rituals.</em></h3><p>Little details that make getting ready your own.</p></div>
-        <div><span>03</span><h3>Made to<br><em>be kept.</em></h3><p>A thoughtful edit, chosen with intention.</p></div>
-      </div>
-    </section>
-
-    <section class="newsletter">
-      <p class="eyebrow">LETTERS FROM MAYTHA</p><h2>A little note<br><em>when it matters.</em></h2>
-      <p>Be first to hear when the first edit arrives.</p>
-      <form id="newsletterForm"><label class="sr-only" for="email">Email address</label><input id="email" type="email" placeholder="Your email address" required><button type="submit" aria-label="Subscribe">↗</button></form>
-      <small id="newsletterMessage">No noise. Just the occasional lovely thing.</small>
+    <section class="story" id="story">
+      <div class="story-mark" lang="ar">ميثا</div>
+      <div class="story-copy"><p class="eyebrow">A NOTE FROM MAYTHA</p><h2>Beauty in the details.</h2><p>MAYTHA is built around the small pieces that make an everyday moment feel a little more considered. An edited palette, graceful shapes, and details worth noticing.</p></div>
     </section>
   </main>
 
-  <footer class="footer">
-    <a class="footer-logo" href="#home"><span class="arabic-mark" lang="ar" dir="rtl">ميثا</span><span class="english-mark">MAYTHA</span></a>
-    <p>THE ART OF THE DETAIL.</p>
-    <div><a href="#shop">SHOP</a><a href="#story">OUR STORY</a><a href="mailto:hello@maytha.example">CONTACT</a></div>
-    <small>© 2026 MAYTHA · CONCEPT WEBSITE</small>
+  <footer class="site-footer">
+    <a class="footer-brand" href="#home">MAYTHA</a>
+    <span>Thoughtful details, timeless style.</span>
+    <span>© <span id="year"></span> MAYTHA</span>
   </footer>
 
-  <div class="bag-overlay" id="bagOverlay" hidden>
-    <button class="overlay-backdrop" id="closeBag" aria-label="Close bag"></button>
-    <aside class="bag-drawer" role="dialog" aria-modal="true" aria-labelledby="bagTitle">
-      <div class="bag-head"><h2 id="bagTitle">Your bag <em id="bagItemsLabel">(0)</em></h2><button id="closeBagX" aria-label="Close bag">×</button></div>
-      <div id="bagItems" class="bag-items"><p class="empty-bag">Your bag is taking a little pause.</p></div>
-      <div class="bag-foot"><div><span>SUBTOTAL</span><strong id="bagTotal">SAR 0</strong></div><p>Shipping calculated separately.</p><button class="checkout-button" id="checkoutButton">CONTINUE <span>↗</span></button><small>Demo only — checkout is not connected.</small></div>
-    </aside>
-  </div>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="cart-header"><div><p class="eyebrow">YOUR SELECTION</p><h2>Your bag</h2></div><button id="closeCart" class="close-cart" aria-label="Close bag">×</button></div>
+    <div class="cart-items" id="cartItems"><p class="empty-cart">Your bag is waiting for something lovely.</p></div>
+    <div class="cart-footer"><div class="subtotal"><span>Subtotal</span><strong id="subtotal">SAR 0</strong></div><p class="cart-note">Preview only — checkout will be added when the store is ready.</p><button class="checkout-button" id="checkoutButton">Continue</button></div>
+  </aside>
   <script src="script.js"></script>
 </body>
 </html>
